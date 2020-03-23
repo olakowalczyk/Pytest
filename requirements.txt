@@ -1,0 +1,4 @@
+selenium==3.141.0
+pytest==5.3.5
+pytest-html==2.0.1
+chromedriver-autoinstaller==0.2.0

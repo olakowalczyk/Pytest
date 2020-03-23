@@ -1,4 +1,6 @@
 from pages.form import FormPage
+import chromedriver_autoinstaller
+chromedriver_autoinstaller.install()
 
 pytest_plugins = [
   'tests.config.browser'
