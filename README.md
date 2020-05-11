@@ -1,6 +1,6 @@
 # Automation tests for simple html form
 This is a simple project for testing using **Pytest** and **Selenium**.
-Example report is available in the repository: _ereport.html_
+Example report is available in the repository: _report.html_
 These tests are made just for Chrome browser.
 
 ### Prerequisites
@@ -10,7 +10,9 @@ In order to run these tests:
 
 ### Run project
 Get clone from this repo
+
 Open cmd
+
 Run commands:
 ```
 cd "the_repo_folder_path"
