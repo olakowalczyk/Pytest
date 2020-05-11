@@ -6,8 +6,6 @@ pytest_plugins = [
     'tests.config.browser'
 ]
 
-test_data = {'firstname': 'Mickey', 'lastname ': 'Mouse'}
-
 
 def test_initial_values(browser):  # checks initial values
     form_page = FormPage(browser)
