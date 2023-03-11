@@ -9,23 +9,23 @@ class FormPage:
     file_name = 'index.html'
     LOCATION = os.path.join(file_dir, file_name)
 
-    def __init__(self, browser):
-        self.browser = browser
+    def __init__(self, driver):
+        self.driver = driver
 
     @property
     def firstname_input(self):
-        return self.browser.find_element(*FormPageLocators.FIRST_INPUT)
+        return self.driver.find_element(*FormPageLocators.FIRST_INPUT)
 
     @property
     def lastname_input(self):
-        return self.browser.find_element(*FormPageLocators.LAST_INPUT)
+        return self.driver.find_element(*FormPageLocators.LAST_INPUT)
 
     @property
     def submit_button(self):
-        return self.browser.find_element(*FormPageLocators.SUBMIT_BUTTON)
+        return self.driver.find_element(*FormPageLocators.SUBMIT_BUTTON)
 
     def load(self):
-        self.browser.get(self.LOCATION)
+        self.driver.get(self.LOCATION)
 
     def clear_form(self):
         self.firstname_input.clear()
