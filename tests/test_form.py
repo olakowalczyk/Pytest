@@ -1,3 +1,4 @@
+import pytest
 from pages.form_page import FormPage
 import chromedriver_autoinstaller
 chromedriver_autoinstaller.install()
@@ -20,20 +21,16 @@ class TestSubmitForm:
         assert form_page.lastname_input_value() == ''
 
 
-    def test_inputs(self, form_page):  # checks new input values
-        firstname = 'Donald'
-        lastname = 'Duck'
-
+    @pytest.mark.parametrize("firstname, lastname", [("Donald", "Duck")])
+    def test_inputs(self, form_page, firstname, lastname):  # checks new input values
         form_page.enter_firstname(firstname)
         form_page.enter_lastname(lastname)
         assert form_page.firstname_input_value() == firstname
         assert form_page.lastname_input_value() == lastname
 
 
-    def test_submit(self, form_page):  # checks sumbit i.e. reload page
-        firstname = 'Peter'
-        lastname = 'Pan'
-
+    @pytest.mark.parametrize("firstname, lastname", [("Peter", "Pan")])
+    def test_submit(self, form_page, firstname, lastname):  # checks sumbit i.e. reload page
         form_page.enter_firstname(firstname)
         form_page.enter_lastname(lastname)
         form_page.submit()
