@@ -5,7 +5,7 @@ These tests are made just for Chrome browser.
 
 ### Prerequisites
 In order to run these tests:
-  - **Chrome Web Browser** and compatible ChromeDriver (80.0.3987.87 & 80.0.3987.16)
+  - **Chrome Web Browser** and compatible ChromeDriver
   - **Python 3** are needed
 
 ### Run project
